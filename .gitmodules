@@ -1,3 +1,6 @@
 [submodule "AnyKernel3"]
 	path = anykernel3
 	url = git@github.com:Yet-Another-Builtbot/AnyKernel3.git
+[submodule "dtbtool"]
+	path = dtbtool
+	url = https://github.com/rajatgupta1998/android_tools_system_dtbTool
