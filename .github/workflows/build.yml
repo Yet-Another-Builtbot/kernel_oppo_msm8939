@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
 
     steps:
     - name: Checkout Code
@@ -23,7 +23,7 @@ jobs:
         sudo apt-get install -y ccache
 
     - name: Restore ccache Cache
-      uses: actions/cache@v3
+      uses: useblacksmith/cache@v5
       with:
         path: ~/.cache/ccache
         key: ${{ runner.os }}-ccache-${{ github.sha }}
@@ -80,7 +80,7 @@ jobs:
         (cd anykernel3 && zip -r ../out/A37F_KERNEL_$(date +%d.%m.%Y_%H:%M:%S).zip . -x 'LICENSE' 'README.md' 'dtbtool.c')
 
     - name: Save ccache Cache
-      uses: actions/cache@v3
+      uses: useblacksmith/cache@v5
       with:
         path: ~/.cache/ccache
         key: ${{ runner.os }}-ccache-${{ github.sha }}
