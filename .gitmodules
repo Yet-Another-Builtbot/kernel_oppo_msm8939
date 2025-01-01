@@ -1,0 +1,3 @@
+[submodule "AnyKernel3"]
+	path = anykernel3
+	url = git@github.com:osm0sis/AnyKernel3.git
